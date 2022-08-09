@@ -201,7 +201,7 @@ class JobRunner(FLComponent):
         except RuntimeError as e:
             self.log_error(fl_ctx, f"Failed to execute delete run ({job_id}) on the clients: {e}")
 
-       # err = engine.delete_job_id(job_id)
+        err = engine.delete_job_id(job_id)
         if err:
             self.log_error(fl_ctx, f"Failed to delete_run the server for run: {job_id}")
 

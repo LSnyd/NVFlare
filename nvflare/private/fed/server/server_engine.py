@@ -182,8 +182,8 @@ class ServerEngine(ServerEngineInternalSpec):
 
     def delete_job_id(self, num):
         job_id_folder = os.path.join(self.args.workspace, WorkspaceConstants.WORKSPACE_PREFIX + str(num))
-       # if os.path.exists(job_id_folder):
-        #    shutil.rmtree(job_id_folder)
+        if os.path.exists(job_id_folder):
+            shutil.rmtree(job_id_folder)
         return ""
 
     def get_clients(self) -> [Client]:
