@@ -239,7 +239,7 @@ class JobRunner(FLComponent):
         job_manager = engine.get_component(SystemComponents.JOB_MANAGER)
 
         job_manager.save_workspace(job_id, workspace_data, fl_ctx)
-        shutil.rmtree(workspace)
+      #  shutil.rmtree(workspace)
 
     def run(self, fl_ctx: FLContext):
         engine = fl_ctx.get_engine()
